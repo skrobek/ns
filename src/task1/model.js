@@ -1,18 +1,3 @@
-// http(url, method, [data])
-//
-// Order.all() => '/api/v1/orders/all'
-// Order.get(2) => '/api/v1/orders/2'
-
-// Order.query({field: 'currency', op: 'eq', val: 'USD'}) => '/api/v1/orders/search?currency=USD'
-// Order.query([
-//   {field: 'currency', op: 'eq', val: 'USD'},
-//   {field: 'totalValue', op: 'lt', val: 10},
-// ]) => '/api/v1/orders/search?currency=EUR&totalValue=lt.10'
-
-// Consumer.all() => '/api/v1/consumers/list' // Inconsistent endpoint naming!
-// Consumer.get(11) => '/api/v1/consumers/11'
-// Consumer.query({field: 'lastName', op: 'like', val: 'cleese'}) => '/api/v1/consumers/search?lastName=cleese'
-
 var API = require('./mock.js');
 
 var CONFIG = {
@@ -82,20 +67,4 @@ var Model = function(path) {
   return this;
 }
 
-console.log('ORDER');
-var Order = new Model('orders');
-Order.all();
-Order.get(2);
-Order.query({field: 'currency', op: 'eq', val: 'USD'});
-Order.query([
-  {field: 'currency', op: 'eq', val: 'EUR'},
-  {field: 'totalValue', op: 'lt', val: 10},
-])
-console.log('----------------------------------------------------');
-
-// console.log('Consumer');
-var Consumer = new Model('consumers');
-Consumer.all();
-Consumer.get(11);
-Consumer.query({field: 'lastName', op: 'like', val: 'cleese'});
-console.log('----------------------------------------------------');
+module.exports = Model;
