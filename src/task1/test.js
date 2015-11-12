@@ -18,7 +18,6 @@ QUnit.test("API Test", function(assert) {
   });
 
   API('/api/v1/orders/search?currency=USD').then(function(res) {
-    console.log(res);
     assert.equal(res[0].currency, "USD");
     doneSearch();
   });
