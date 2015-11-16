@@ -50,18 +50,18 @@ var Model = function(path) {
 
   this.all = function() {
     var url = path + 'all';
-    API(url, "GET").done(callback);
+    return API(url, "GET");
   };
 
   this.get = function(id) {
     var url = path + id;
-    API(url, "GET").done(callback);
+    return API(url, "GET");
   };
 
   this.query = function(params) {
     var url = path + 'search?';
     url += QueryParser.parse(params);
-    API(url, "GET").done(callback);
+    return API(url, "GET");
   };
 
   return this;
