@@ -13,7 +13,8 @@
     "jsonfile": "^2.2.3",
     "lodash": "^3.10.1",
     "q": "^1.4.1",
-    "qunit": "^0.7.7"
+    "qunit": "^0.7.7",
+    "qunit-cli": "^0.2.0"
   },
   "devDependencies": {
     "qunitjs": "^1.20.0"
