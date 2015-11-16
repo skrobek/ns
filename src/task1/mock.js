@@ -21,7 +21,7 @@ var mock = function http(url, method, data) {
     '/api/v1/orders/search?currency=EUR&totalValue=lt.10': [orders[2]],
     '/api/v1/consumers/list': consumers,
     '/api/v1/consumers/11': consumers[1],
-    '/api/v1/consumers/search?lastName=cleese': consumers[0],
+    '/api/v1/consumers/search?lastName=cleese': [consumers[0]],
   };
 
   var res = Q.defer();
